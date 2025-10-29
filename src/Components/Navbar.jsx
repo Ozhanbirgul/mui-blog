@@ -11,7 +11,8 @@ import {
 const Navbar = () => {
   return (
     <AppBar
-      position="static"
+      position="sticky"
+       elevation={4}
       sx={{ backgroundColor: "#E0E0E0", color: "#2C3E50" }}
     >
       <Container>
