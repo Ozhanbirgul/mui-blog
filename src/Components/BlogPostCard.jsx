@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
 const BlogPostCard = ({ id, title, image, date, category, readTime }) => {
   const navigate = useNavigate();
@@ -12,7 +12,8 @@ const BlogPostCard = ({ id, title, image, date, category, readTime }) => {
       onClick={() => navigate(`/blog/${id}`)}
       sx={{
         position: "relative",
-        height: 250,
+        height: 300,
+        width: 350,
         borderRadius: 2,
         overflow: "hidden",
         cursor: "pointer",
@@ -27,7 +28,7 @@ const BlogPostCard = ({ id, title, image, date, category, readTime }) => {
       {/* Görsel üst kısım */}
       <MotionBox
         sx={{
-          height: "60%",
+          height: "70%",
           backgroundImage: `url(${image})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
