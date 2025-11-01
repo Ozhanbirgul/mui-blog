@@ -23,7 +23,7 @@ const FeaturedPosts = () => {
         {posts.map((post) => (
           <Grid
             key={post.id}
-            sx={{ width: { xs: "100%", sm: "50%", md: "40%" } }}
+            sx={{ width: { xs: "100%", sm: "50%", md: "45%" } }}
           >
             <BlogPostCard {...post} />
           </Grid>
