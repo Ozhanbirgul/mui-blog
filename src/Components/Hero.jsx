@@ -12,6 +12,7 @@ import {
   Stack,
 } from "@mui/material";
 import FeaturedPosts from "./FeaturedPosts";
+import Categories from "./Categories";
 
 const Hero = () => {
   const popularPosts = [
@@ -94,6 +95,7 @@ const Hero = () => {
               </Button>
             </Box>
             <FeaturedPosts />
+            <Categories />
           </Grid>
 
           {/* --- Sağ taraf (Sidebar) --- */}
