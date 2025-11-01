@@ -1,5 +1,6 @@
 export const posts = [
   {
+    id: 1,
     title: "Uludağ Pınarlar Gölünden Aşağı Gezinti",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
     date: "20 Ekim 2025",
@@ -7,6 +8,7 @@ export const posts = [
     readTime: "5 dk",
   },
   {
+    id: 2,
     title: "Looper Paradox: Zamanda Sıkış Yolculuğu",
     image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800",
     date: "21 Ekim 2025",
@@ -14,10 +16,19 @@ export const posts = [
     readTime: "8 dk",
   },
   {
+    id: 3,
     title: "Yalnız İnsanla Fiziksel Doğma Hissetmek",
     image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800",
     date: "22 Ekim 2025",
     category: "YAŞAM",
+    readTime: "6 dk",
+  },
+  {
+    id: 4,
+    title: "Yalnız İnsanla Fiziksel Doğma Hissetmek",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800",
+    date: "22 Ekim 2025",
+    category: "SEYAHAT",
     readTime: "6 dk",
   },
 ];
