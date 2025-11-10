@@ -1,8 +1,7 @@
 import { Box, Chip, Container, Stack, Typography } from "@mui/material";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import BlogPostCard from "./BlogPostCard";
+import Post from "./Post";
 import { posts } from "../data/posts";
 
 const MotionChip = motion.create(Chip);
@@ -34,7 +33,6 @@ const Categories = () => {
           mb: 4,
         }}
       >
-        <TrendingUpIcon sx={{ mr: 1, color: "primary.main" }} />
         <Typography variant="h4" sx={{ fontWeight: "bold", color: "#2C3E50" }}>
           Kategoriler
         </Typography>
@@ -72,7 +70,7 @@ const Categories = () => {
       <Stack direction="row" flexWrap="wrap" gap={3}>
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
-            <BlogPostCard
+            <Post
               key={post.id}
               id={post.id}
               title={post.title}

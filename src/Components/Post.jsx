@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const MotionBox = motion.create(Box);
 
-const BlogPostCard = ({ id, title, image, date, category, readTime }) => {
+const Post= ({ id, title, image, date, category, readTime }) => {
   const navigate = useNavigate();
 
   return (
@@ -85,4 +85,4 @@ const BlogPostCard = ({ id, title, image, date, category, readTime }) => {
   );
 };
 
-export default BlogPostCard;
+export default Post;
