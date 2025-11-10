@@ -11,8 +11,11 @@ import {
   Chip,
   Stack,
 } from "@mui/material";
-import FeaturedPosts from "./FeaturedPosts";
+import HomePosts from "./HomePosts";
 import Categories from "./Categories";
+import TrendingPosts from "../../../../PROJELERİM/mui-blog/src/components/TrendingPosts";
+import LatestPost from "../../../../PROJELERİM/mui-blog/src/components/LatestPost";
+import OutAuthors from "../../../../PROJELERİM/mui-blog/src/components/OutAuthors";
 
 const Hero = () => {
   const popularPosts = [
@@ -94,8 +97,11 @@ const Hero = () => {
                 ŞİMDİ BAŞLA
               </Button>
             </Box>
-            <FeaturedPosts />
+            <HomePosts />
             <Categories />
+            <TrendingPosts />
+            <LatestPost />
+            <OutAuthors />
           </Grid>
 
           {/* --- Sağ taraf (Sidebar) --- */}
