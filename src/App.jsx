@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import BlogDetail from "./pages/BlogDetail"; 
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/hakkimizda" element={<About />} />
         <Route path="/iletisim" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

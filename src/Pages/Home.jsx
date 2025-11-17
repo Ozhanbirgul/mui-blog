@@ -98,7 +98,6 @@ const Home = () => {
 
         </Grid>
       </Container>
-      <Footer />
     </Box>
   );
 };
