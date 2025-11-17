@@ -7,9 +7,6 @@ import {
   ListItemText,
   Paper,
   Container,
-  Button,
-  Chip,
-  Stack,
 } from "@mui/material";
 import HomePosts from "../components/HomePosts";
 import Categories from "../components/Categories";
@@ -18,7 +15,6 @@ import LatestPost from "../../../../PROJELERİM/mui-blog/src/components/LatestPo
 import OutAuthors from "../../../../PROJELERİM/mui-blog/src/components/OutAuthors";
 import EmailSubscriptionCta from "../components/EmailSubscriptionCta";
 import Hero from "../components/Hero";
-import Footer from "../components/Footer";
 
 const Home = () => {
   const popularPosts = [
