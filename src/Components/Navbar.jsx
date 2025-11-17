@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Public } from "@mui/icons-material";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
@@ -24,32 +25,7 @@ const Navbar = () => {
             alignItems: "center",
           }}
         >
-          <Box
-            component={Link}
-            to="/"
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              textDecoration: "none",
-            }}
-          >
-            <Public sx={{ mr: 1, color: "#2C3E50" }} />
-            <Typography
-              variant="h4"
-              component={Link}
-              to="/"
-              sx={{
-                cursor: "pointer",
-                textDecoration: "none",
-                color: "#2C3E50",
-                fontWeight: 700,
-              }}
-            >
-              Dünya Rotası
-            </Typography>
-          </Box>
+          <Logo />
 
           <Box
             sx={{
