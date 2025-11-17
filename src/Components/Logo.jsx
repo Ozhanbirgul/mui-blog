@@ -12,18 +12,17 @@ const Logo = ({ text = "Dünya Rotası", color = "#2C3E50" }) => {
         alignItems: "center",
         textDecoration: "none",
         color: color,
+        "&:hover": { color: "#2980B9" },
       }}
     >
       <Public sx={{ mr: 1, color: color }} />
+
       <Typography
         variant="h4"
-        component={Link}
-        to="/"
         sx={{
-          cursor: "pointer",
-          textDecoration: "none",
-          color: color,
           fontWeight: 700,
+          color: color,
+          textDecoration: "none",
         }}
       >
         {text}

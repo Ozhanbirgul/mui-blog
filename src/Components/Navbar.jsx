@@ -1,13 +1,11 @@
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   Box,
   Container,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Public } from "@mui/icons-material";
 import Logo from "./Logo";
 
 const Navbar = () => {
