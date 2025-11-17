@@ -10,9 +10,9 @@ import {
 } from "@mui/material";
 import HomePosts from "../components/HomePosts";
 import Categories from "../components/Categories";
-import TrendingPosts from "../../../../PROJELERİM/mui-blog/src/components/TrendingPosts";
-import LatestPost from "../../../../PROJELERİM/mui-blog/src/components/LatestPost";
-import OutAuthors from "../../../../PROJELERİM/mui-blog/src/components/OutAuthors";
+import TrendingPosts from "../components/TrendingPosts";
+import LatestPost from "../components/LatestPost";
+import OutAuthors from "../components/OutAuthors";
 import EmailSubscriptionCta from "../components/EmailSubscriptionCta";
 import Hero from "../components/Hero";
 
