@@ -1,12 +1,106 @@
-import React from 'react'
-import Hero from '../components/Hero'
+import {
+  Box,
+  Grid,
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  Paper,
+  Container,
+  Button,
+  Chip,
+  Stack,
+} from "@mui/material";
+import HomePosts from "../components/HomePosts";
+import Categories from "../components/Categories";
+import TrendingPosts from "../../../../PROJELERİM/mui-blog/src/components/TrendingPosts";
+import LatestPost from "../../../../PROJELERİM/mui-blog/src/components/LatestPost";
+import OutAuthors from "../../../../PROJELERİM/mui-blog/src/components/OutAuthors";
+import EmailSubscriptionCta from "../components/EmailSubscriptionCta";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 
 const Home = () => {
+  const popularPosts = [
+    { title: "Sivas-Gürün Yolu Sahanda Ev Sırtı'na Giden Yol" },
+    { title: "Sivas'dan Sonsuza Kadar Kıran Yolu'na Gitmek İçin" },
+    { title: "Erzincan'dan Keşişlik Yaylası'na Gitmek İçin" },
+  ];
   return (
-    <>
+    <Box sx={{ backgroundColor: "#f8f9fa" }}>
       <Hero />
-    </>
-  )
-}
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Grid container spacing={3} alignItems="stretch">
 
-export default Home
+          {/* --- Sol taraf (Hero Görseli) --- */}
+          <Grid
+            sx={{
+              width: { xs: "100%", md: "71%" },
+              backgroundColor: "#fff",
+            }}
+          >
+            <HomePosts />
+            <Categories />
+            <TrendingPosts />
+            <LatestPost />
+            <OutAuthors />
+          </Grid>
+
+          {/* --- Sağ taraf (Sidebar) --- */}
+          <Grid
+            sx={{
+              width: { xs: "100%", md: "25%" },
+            }}
+          >
+            <Paper
+              elevation={3}
+              sx={{
+                p: 3,
+                minHeight: { xs: "auto", md: 150 },
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                backgroundColor: "#fff",
+                position: { xs: "relative", md: "sticky" },
+                top: { xs: 0, md: 100 },
+              }}
+            >
+              <Typography
+                variant="h6"
+                component="h2"
+                gutterBottom
+                sx={{ fontWeight: 600, color: "#2C3E50" }}
+              >
+                Popüler Yazılar
+              </Typography>
+              <List sx={{ mb: 3 }}>
+                {popularPosts.map((post, index) => (
+                  <ListItem key={index} disablePadding sx={{ mb: 1.5 }}>
+                    <ListItemText
+                      primary={post.title}
+                      primaryTypographyProps={{
+                        fontSize: 13,
+                        fontWeight: 400,
+                        color: "#666",
+                        sx: {
+                          cursor: "pointer",
+                          "&:hover": { color: "#2980B9" },
+                        },
+                      }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Paper>
+
+            <EmailSubscriptionCta />
+          </Grid>
+
+        </Grid>
+      </Container>
+      <Footer />
+    </Box>
+  );
+};
+
+export default Home;
