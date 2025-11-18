@@ -36,8 +36,8 @@ export default function Footer() {
               variant="body1"
               sx={{ lineHeight: 1.8, color: "#F7F5F2", width: "500px", mt: 2 }}
             >
-              Frontend, React, JavaScript ve yazılım dünyasına dair güncel,
-              derinlemesine içeriklerin yer aldığı profesyonel blog platformu.
+              Dünya çapında keşifler, seyahat ipuçları ve unutulmaz deneyimlerin
+              paylaşıldığı profesyonel blog platformu.
             </Typography>
           </Grid>
 
@@ -122,7 +122,7 @@ export default function Footer() {
           textAlign="center"
           sx={{ color: "#F7F5F2", opacity: 0.7 }}
         >
-          © {new Date().getFullYear()} MyBlog. Tüm hakları saklıdır. | Bu
+          © {new Date().getFullYear()} Dünya Rotası. Tüm hakları saklıdır. | Bu
           platform sevgiyle kodlanmıştır.
         </Typography>
       </Container>

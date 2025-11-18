@@ -27,7 +27,6 @@ const Home = () => {
       <Hero />
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Grid container spacing={3} alignItems="stretch">
-
           {/* --- Sol taraf (Hero Görseli) --- */}
           <Grid
             sx={{
@@ -48,50 +47,62 @@ const Home = () => {
               width: { xs: "100%", md: "25%" },
             }}
           >
-            <Paper
-              elevation={3}
+            {/* Tüm sidebar için sticky wrapper */}
+            <Box
               sx={{
-                p: 3,
-                minHeight: { xs: "auto", md: 150 },
+                position: "sticky",
+                top: { xs: 0, md: 100 },
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "flex-start",
-                backgroundColor: "#fff",
-                position: { xs: "relative", md: "sticky" },
-                top: { xs: 0, md: 100 },
+                gap: 3, // Aralarındaki boşluk
               }}
             >
-              <Typography
-                variant="h6"
-                component="h2"
-                gutterBottom
-                sx={{ fontWeight: 600, color: "#2C3E50" }}
+              <Paper
+                elevation={3}
+                sx={{
+                  p: 3,
+                  minHeight: { xs: "auto", md: 150 },
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  backgroundColor: "#fff",
+                }}
               >
-                Popüler Yazılar
-              </Typography>
-              <List sx={{ mb: 3 }}>
-                {popularPosts.map((post, index) => (
-                  <ListItem key={index} disablePadding sx={{ mb: 1.5 }}>
-                    <ListItemText
-                      primary={post.title}
-                      primaryTypographyProps={{
-                        fontSize: 13,
-                        fontWeight: 400,
-                        color: "#666",
-                        sx: {
-                          cursor: "pointer",
-                          "&:hover": { color: "#2980B9" },
-                        },
-                      }}
-                    />
-                  </ListItem>
-                ))}
-              </List>
-            </Paper>
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  gutterBottom
+                  sx={{ fontWeight: 600, color: "#2C3E50" }}
+                >
+                  Popüler Yazılar
+                </Typography>
 
-            <EmailSubscriptionCta />
+                <List sx={{ mb: 3 }}>
+                  {popularPosts.map((post, index) => (
+                    <ListItem key={index} disablePadding sx={{ mb: 1.5 }}>
+                      <ListItemText
+                        primary={post.title}
+                        primaryTypographyProps={{
+                          fontSize: 13,
+                          fontWeight: 400,
+                          color: "#666",
+                          sx: {
+                            cursor: "pointer",
+                            "&:hover": { color: "#2980B9" },
+                          },
+                        }}
+                      />
+                    </ListItem>
+                  ))}
+                </List>
+              </Paper>
+
+              {/* Email Subscription CTA */}
+              <Box>
+                <EmailSubscriptionCta />
+              </Box>
+            </Box>
           </Grid>
-
         </Grid>
       </Container>
     </Box>

@@ -5,7 +5,7 @@ const Hero = () => {
     <Box
       sx={{
         position: "relative",
-        width: "100vw",
+        width: "100%",
         height: { xs: 400, sm: 500, md: 600 },
         backgroundImage:
           "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4')",
