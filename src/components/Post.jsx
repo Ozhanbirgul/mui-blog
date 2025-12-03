@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const MotionBox = motion.create(Box);
 
-const Post= ({ id, title, image, date, category, readTime }) => {
+const Post = ({ id, title, image, date, category, readTime }) => {
   const navigate = useNavigate();
 
   return (
@@ -20,7 +20,7 @@ const Post= ({ id, title, image, date, category, readTime }) => {
         boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
       }}
       whileHover={{
-        y: -5, // yukarı hareket
+        y: -5,
         boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
       }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
@@ -77,7 +77,10 @@ const Post= ({ id, title, image, date, category, readTime }) => {
           borderRadius: 1,
         }}
       >
-        <Typography variant="caption" sx={{ color: "#fff", fontWeight: "bold" }}>
+        <Typography
+          variant="caption"
+          sx={{ color: "#fff", fontWeight: "bold" }}
+        >
           {category}
         </Typography>
       </Box>

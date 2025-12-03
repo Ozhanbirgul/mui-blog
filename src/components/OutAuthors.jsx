@@ -1,7 +1,10 @@
 import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
 import { authors } from "../data/authors";
+import { useNavigate } from "react-router-dom";
 
 const OutAuthors = () => {
+  const navigate = useNavigate();
+
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
       <Box
@@ -25,6 +28,7 @@ const OutAuthors = () => {
             size={{ xs: 12, md: 6 }}
           >
             <Box
+            onClick={() => navigate(`/author/${author.id}`)}
               sx={{
                 textAlign: "center",
                 p: 3,

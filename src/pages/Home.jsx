@@ -15,13 +15,11 @@ import LatestPost from "../components/LatestPost";
 import OutAuthors from "../components/OutAuthors";
 import EmailSubscriptionCta from "../components/EmailSubscriptionCta";
 import Hero from "../components/Hero";
+import { posts } from "../data/posts";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const popularPosts = [
-    { title: "Sivas-Gürün Yolu Sahanda Ev Sırtı'na Giden Yol" },
-    { title: "Sivas'dan Sonsuza Kadar Kıran Yolu'na Gitmek İçin" },
-    { title: "Erzincan'dan Keşişlik Yaylası'na Gitmek İçin" },
-  ];
+  const popularPosts = posts.filter((post) => post.isTrending);
   return (
     <Box sx={{ backgroundColor: "#f8f9fa" }}>
       <Hero />
@@ -47,14 +45,13 @@ const Home = () => {
               width: { xs: "100%", md: "25%" },
             }}
           >
-            {/* Tüm sidebar için sticky wrapper */}
             <Box
               sx={{
                 position: "sticky",
                 top: { xs: 0, md: 100 },
                 display: "flex",
                 flexDirection: "column",
-                gap: 3, // Aralarındaki boşluk
+                gap: 3,
               }}
             >
               <Paper
@@ -78,10 +75,17 @@ const Home = () => {
                 </Typography>
 
                 <List sx={{ mb: 3 }}>
-                  {popularPosts.map((post, index) => (
-                    <ListItem key={index} disablePadding sx={{ mb: 1.5 }}>
+                  {popularPosts.map((post) => (
+                    <ListItem key={post.id} disablePadding sx={{ mb: 1.5 }}>
                       <ListItemText
-                        primary={post.title}
+                        primary={
+                          <Link
+                            to={`/blog/${post.id}`}
+                            style={{ textDecoration: "none", color:"#2980B9" }}
+                          >
+                            {post.title}
+                          </Link>
+                        }
                         primaryTypographyProps={{
                           fontSize: 13,
                           fontWeight: 400,

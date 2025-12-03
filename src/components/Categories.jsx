@@ -1,8 +1,9 @@
-import { Box, Chip, Container, Stack, Typography } from "@mui/material";
+import { Box, Button, Chip, Container, Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Post from "./Post";
 import { posts } from "../data/posts";
+import { Link } from "react-router-dom";
 
 const MotionChip = motion.create(Chip);
 
@@ -84,6 +85,23 @@ const Categories = () => {
           <Typography>Bu kategoriye ait yazı yok.</Typography>
         )}
       </Stack>
+
+      <Box sx={{ mt: 4, textAlign: "center" }}>
+        <Button
+          variant="contained"
+          component={Link}
+          to="/blog"
+          sx={{
+            backgroundColor: "#2C3E50",
+            color: "#F7F5F2",
+            px: 4,
+            py: 1.5,
+            borderRadius: 2,
+          }}
+        >
+          Tüm Yazıları Gör
+        </Button>
+      </Box>
     </Container>
   );
 };
