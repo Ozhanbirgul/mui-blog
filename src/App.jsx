@@ -9,10 +9,12 @@ import Footer from "./components/Footer";
 import Category from "./pages/Category";
 import Blog from "./pages/Blog";
 import AuthorDetail from "./pages/AuthorDetail";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
