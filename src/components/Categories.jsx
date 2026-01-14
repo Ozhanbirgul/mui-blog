@@ -34,7 +34,10 @@ const Categories = () => {
           mb: 4,
         }}
       >
-        <Typography variant="h4" sx={{ fontWeight: "bold", color: "#2C3E50" }}>
+        <Typography
+          variant="h4"
+          sx={{ fontWeight: "bold", color: "text.primary" }}
+        >
           Kategoriler
         </Typography>
       </Box>
@@ -47,16 +50,23 @@ const Categories = () => {
             label={category}
             size="medium"
             sx={{
-              backgroundColor:
-                selectedCategory === category ? "#2C3E50" : "#f5f5f5",
-              color: selectedCategory === category ? "#fff" : "#666",
-              fontSize: "1.1rem",
+              bgcolor:
+                selectedCategory === category
+                  ? "primary.main"
+                  : "background.paper",
+              color:
+                selectedCategory === category
+                  ? "primary.contrastText"
+                  : "text.secondary",
+              border: "1px solid",
+              borderColor:
+                selectedCategory === category ? "primary.main" : "divider",
+              fontSize: "1rem",
               cursor: "pointer",
               px: 2,
-              py: 1.5,
+              py: 1,
               borderRadius: 2,
-              border: "1px solid #2C3E50",
-              transition: "all .2s ease",
+              transition: "all .25s ease",
             }}
             onClick={() => setSelectedCategory(category)}
             whileHover={{
@@ -92,8 +102,6 @@ const Categories = () => {
           component={Link}
           to="/blog"
           sx={{
-            backgroundColor: "#2C3E50",
-            color: "#F7F5F2",
             px: 4,
             py: 1.5,
             borderRadius: 2,

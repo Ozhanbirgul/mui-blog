@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const popularPosts = posts.filter((post) => post.isTrending);
   return (
-    <Box sx={{ backgroundColor: "#f8f9fa" }}>
+    <Box sx={{ backgroundColor: "background.default" }}>
       <Hero />
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Grid container spacing={3} alignItems="stretch">
@@ -29,7 +29,7 @@ const Home = () => {
           <Grid
             sx={{
               width: { xs: "100%", md: "71%" },
-              backgroundColor: "#fff",
+              backgroundColor: "background.paper",
             }}
           >
             <HomePosts />
@@ -62,14 +62,14 @@ const Home = () => {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-start",
-                  backgroundColor: "#fff",
+                  backgroundColor: "background.paper",
                 }}
               >
                 <Typography
                   variant="h6"
                   component="h2"
                   gutterBottom
-                  sx={{ fontWeight: 600, color: "#2C3E50" }}
+                  sx={{ fontWeight: 600, color: "text.primary" }}
                 >
                   Popüler Yazılar
                 </Typography>
@@ -81,9 +81,18 @@ const Home = () => {
                         primary={
                           <Link
                             to={`/blog/${post.id}`}
-                            style={{ textDecoration: "none", color:"#2980B9" }}
+                            style={{ textDecoration: "none" }}
                           >
-                            {post.title}
+                            <Typography
+                              sx={{
+                                color: "text.secondary",
+                                "&:hover": {
+                                  color: "primary.main",
+                                },
+                              }}
+                            >
+                              {post.title}
+                            </Typography>
                           </Link>
                         }
                         primaryTypographyProps={{

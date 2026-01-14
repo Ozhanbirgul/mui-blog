@@ -17,7 +17,7 @@ const TrendingPosts = () => {
         }}
       >
         <TrendingUpIcon sx={{ mr: 1, color: "primary.main" }} />
-        <Typography variant="h4" sx={{ fontWeight: "bold", color: "#2C3E50" }}>
+        <Typography variant="h4" fontWeight="bold" color="text.primary">
           Trend Yazılar
         </Typography>
       </Box>

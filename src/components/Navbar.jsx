@@ -4,16 +4,25 @@ import {
   Button,
   Box,
   Container,
+  IconButton,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import Logo from "./Logo";
+import { useColorMode } from "../context/ThemeContext";
 
 const Navbar = () => {
+  const { mode, toggleColorMode } = useColorMode();
+
   return (
     <AppBar
       position="sticky"
       elevation={4}
-      sx={{ backgroundColor: "#E0E0E0", color: "#2C3E50" }}
+      sx={{
+        bgcolor: "background.paper",
+        color: "text.primary",
+      }}
     >
       <Container>
         <Toolbar
@@ -28,11 +37,10 @@ const Navbar = () => {
           <Box
             sx={{
               "& a": {
-                color: "#2C3E50",
-                transition: "all 0.3s ease",
+                color: "text.primary",
                 "&:hover": {
-                  backgroundColor: "#2980B9",
-                  color: "#F7F5F2",
+                  bgcolor: "primary.main",
+                  color: "#fff",
                 },
               },
             }}
@@ -47,6 +55,11 @@ const Navbar = () => {
               İletişim
             </Button>
           </Box>
+
+          {/* Dark / Light Toggle */}
+          <IconButton onClick={toggleColorMode}>
+            {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>

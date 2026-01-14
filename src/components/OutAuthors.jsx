@@ -15,7 +15,7 @@ const OutAuthors = () => {
           mb: 4,
         }}
       >
-        <Typography variant="h4" sx={{ fontWeight: "bold", color: "#2C3E50" }}>
+        <Typography variant="h4" fontWeight="bold" color="text.primary">
           Yazarlarımız
         </Typography>
       </Box>
@@ -48,13 +48,13 @@ const OutAuthors = () => {
                 {author.name}
               </Typography>
 
-              <Typography variant="subtitle1" sx={{ color: "#555", mb: 1 }}>
+              <Typography variant="subtitle1" sx={{ color:"text.primary", mb: 1 }}>
                 {author.title}
               </Typography>
 
               <Typography
                 variant="body2"
-                sx={{ fontStyle: "italic", color: "#555" }}
+                sx={{ fontStyle: "italic", color:"text.primary" }}
               >
                 "{author.bio}"
               </Typography>

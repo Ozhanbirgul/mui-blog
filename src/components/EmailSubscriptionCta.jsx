@@ -43,8 +43,8 @@ const EmailSubscriptionCta = () => {
           padding: 4,
           textAlign: "center",
           my: 6,
-          bgcolor: "#2ecc71",
-          color: "#fff",
+          bgcolor: "success.main",
+          color: "success.contrastText",
           transition: "all .5s ease",
           position: { xs: "relative", md: "sticky" },
           top: { xs: 0, md: 20 },
@@ -70,7 +70,7 @@ const EmailSubscriptionCta = () => {
           padding: { xs: 2, md: 2 },
           my: 4,
           textAlign: "center",
-          bgcolor: "#2C3E50",
+          bgcolor: "background.paper",
           position: { xs: "relative", md: "sticky" },
           top: { xs: 0, md: 430 },
         }}
@@ -79,12 +79,12 @@ const EmailSubscriptionCta = () => {
           variant="h6"
           component="h2"
           gutterBottom
-          sx={{ fontWeight: 600, color: "#E0E0E0" }}
+          sx={{ fontWeight: 600, color: "text.primary" }}
         >
           Özel İçerikler Gelen Kutunuzda
         </Typography>
 
-        <Typography variant="body1" color="#E0E0E0" sx={{ mb: 3 }}>
+        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
           Haftalık bültenimize kaydolun, hiçbir trendi kaçırmayın.
         </Typography>
 
@@ -121,7 +121,7 @@ const EmailSubscriptionCta = () => {
                   notched: false,
                 }}
                 sx={{
-                  backgroundColor: "#F7F5F2",
+                  backgroundColor: "background.default",
                   borderRadius: "5px",
                 }}
               />
@@ -138,8 +138,8 @@ const EmailSubscriptionCta = () => {
                 disabled={isLoading}
                 sx={{
                   height: "56px",
-                  color: "#F7F5F2",
-                  backgroundColor: '#2980B9'
+                  color: "primary.contrastText",
+                  bgcolor: "primary.main",
                 }}
               >
                 {isLoading ? (
